@@ -11,7 +11,9 @@ function App() {
   return (
     <>
     <NavBar/>
+Hello there!
     <SideBarSlider/>
+Hello there!
     <ProductDetail/>
 Hello there!
     </>
