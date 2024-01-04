@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 
-import { createTheme, MantineProvider } from '@mantine/core';
+
+import {createTheme, MantineProvider } from '@mantine/core';
+import '@mantine/carousel/styles.css';
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
