@@ -1,8 +1,9 @@
-import classes from '../Styles/NavBar.modules.scss'
+import  '../Styles/NavBar.modules.scss'
 
 function NavBar (){
     return ( 
     <>
+    Hello there!
     </>
     )
 }

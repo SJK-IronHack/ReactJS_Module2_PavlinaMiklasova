@@ -1,9 +1,9 @@
-import classes from '../Styles/DetailComponentStyles.modules.scss'
+import '../Styles/DetailComponentStyles.modules.scss'
 
 function ProductDetail (){
     return ( 
     <>
-    
+    Hello there! from productdetail
     </>
     )
 }

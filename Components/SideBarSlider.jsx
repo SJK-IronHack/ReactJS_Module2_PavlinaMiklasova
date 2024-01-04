@@ -1,7 +1,8 @@
-import classes from '../Styles/SideBarSlider,modules.scss'
+import '../Styles/SideBarSlider.modules.scss'
 function SideBarSlider (){
     return ( 
     <>
+    Hello there from Slidebar!
     </>
     )
 }
