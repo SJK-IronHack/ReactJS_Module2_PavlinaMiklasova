@@ -3,7 +3,7 @@ import  '../Styles/NavBar.modules.scss'
 function NavBar (){
     return ( 
     <>
-    Hello there!
+    Hello there from NavBar!
     </>
     )
 }
