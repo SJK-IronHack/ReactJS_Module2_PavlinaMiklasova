@@ -1,10 +1,13 @@
+import { useContext } from 'react';
 import '../Styles/SideBarSlider.modules.scss'
+import { Link } from 'react-router-dom'
 
 import { Carousel } from '@mantine/carousel';
+import { AllProjectContext } from '../Contexts/AllProjectsContext';
 
 
 function SideBarSlider() {
-
+const {projects} =useContext(AllProjectContext)
 
     return (
 
@@ -19,6 +22,13 @@ function SideBarSlider() {
                 dragFree
                 withControls={false}
             >
+                {projects.map(project => (
+                    <>
+                    <li key={project.id}>
+                        <Link t={}> </Link>
+                    </li>
+                    </>
+                ))}
                 <Carousel.Slide>1</Carousel.Slide>
                 <Carousel.Slide>2</Carousel.Slide>
                 <Carousel.Slide>3</Carousel.Slide>
