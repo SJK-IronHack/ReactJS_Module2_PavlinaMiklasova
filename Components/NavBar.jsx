@@ -1,11 +1,12 @@
+import { Link } from 'react-router-dom';
 import  '../Styles/NavBar.modules.scss'
 
 function NavBar (){
     return ( 
     <>
-    <link to={`/`}>    
+    <Link to={`/`}>    
     <h1>PavlinaMiklasova</h1>
-    </link>
+    </Link>
     </>
     )
 }
