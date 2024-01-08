@@ -24,8 +24,7 @@ const AllProjectContextProvider = ({ children }) => {
 
   return (
     <AllProjectContext.Provider
-      value={{ projects }}
-    >
+      value={{ projects }}>
       {children}
     </AllProjectContext.Provider>
   )

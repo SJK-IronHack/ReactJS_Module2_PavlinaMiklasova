@@ -3,7 +3,9 @@ import  '../Styles/NavBar.modules.scss'
 function NavBar (){
     return ( 
     <>
-    Hello there from NavBar!
+    <link to={`/`}>    
+    <h1>PavlinaMiklasova</h1>
+    </link>
     </>
     )
 }

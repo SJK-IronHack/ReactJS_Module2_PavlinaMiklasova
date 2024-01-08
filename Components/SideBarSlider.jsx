@@ -7,7 +7,7 @@ import { AllProjectContext } from '../Contexts/AllProjectsContext';
 
 
 function SideBarSlider() {
-const {projects} =useContext(AllProjectContext)
+const {projects} = useContext(AllProjectContext)
 
     return (
 
