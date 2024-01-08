@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useState } from 'react'
 import axios from "axios";
 import { Link } from "react-router-dom";
-const API_URL = "https://localhost:4000/projects"
+const API_URL = "http://localhost:4000/projects"
 
 
 
