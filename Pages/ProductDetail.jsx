@@ -7,9 +7,10 @@ function ProductDetail (){
 
     <>
     <ImagesSliderDetail/>
-    <h2>Hello there! from productdetail</h2>
+    <h2>Here comes the project.title</h2>
     <section>
-        <p className="DescriptionText"></p>
+        <p className="DescriptionText">Here comes project.description</p>
+        <p className="Yeartext">Here comes project.year</p>
     </section>
     
     </>

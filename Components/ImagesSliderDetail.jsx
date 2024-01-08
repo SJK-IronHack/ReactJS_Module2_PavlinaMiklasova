@@ -4,10 +4,8 @@ function ImagesSliderDetail (){
     return ( 
 
     <>
-    <h2>Hello there! from Image Slider</h2>
-    <section>
-        <p className="DescriptionText"></p>
-    </section>
+    <h2>Here come project.imagesurl</h2>
+<img/>
     
     </>
     )
