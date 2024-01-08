@@ -11,7 +11,7 @@ const AllProjectContextProvider = ({ children }) => {
     axios
       .get(`${API_URL}`)
       .then((response) => {
-        console.log(response.data);
+        //console.log(response.data);
         setProjects(response.data);
       })
       .catch((error) => console.log(error));
