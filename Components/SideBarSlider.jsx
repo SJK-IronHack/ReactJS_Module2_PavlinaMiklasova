@@ -5,14 +5,6 @@ import { Carousel } from '@mantine/carousel';
 
 function SideBarSlider() {
 
-    fetch("https://github.com/sonali582000/Module2-jsonBackendServer/blob/master/db.json")
-  .then((response) => { 
-    return response.json();
-  })
-  .then((data) => {
-    console.log("Parsed response: ", data);
-  })
-  .catch( (err) => console.log(err));
 
     return (
 
@@ -27,10 +19,7 @@ function SideBarSlider() {
                 dragFree
                 withControls={false}
             >
-                <Carousel.Slide>    <img 
-      src="https://github.com/sonali582000/Module2-jsonBackendServer/blob/master/img/SliderSideBar/P0.jpg"
-      alt="new"
-      /></Carousel.Slide>
+                <Carousel.Slide>1</Carousel.Slide>
                 <Carousel.Slide>2</Carousel.Slide>
                 <Carousel.Slide>3</Carousel.Slide>
             </Carousel>

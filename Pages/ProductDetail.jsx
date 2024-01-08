@@ -1,9 +1,17 @@
+import ImagesSliderDetail from '../Components/ImagesSliderDetail';
 import '../Styles/DetailComponentStyles.modules.scss'
+
 
 function ProductDetail (){
     return ( 
+
     <>
-    Hello there! from productdetail
+    <ImagesSliderDetail/>
+    <h2>Hello there! from productdetail</h2>
+    <section>
+        <p className="DescriptionText"></p>
+    </section>
+    
     </>
     )
 }
