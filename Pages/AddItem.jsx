@@ -11,6 +11,10 @@ function AddItem() {
                         <input name="projectTitle" type="text" placeholder="Project Title" value={projectTitle} onChange={handleProjectTitleChange} />
                     </label>
                     <label>
+                        Description Text
+                        <input name="description" type="text" placeholder="YProject Description" value={fullName} onChange={handleYearChange} />
+                    </label>
+                    <label>
                         Year
                         <input name="year" type="text" placeholder="Year of the project" value={fullName} onChange={handleYearChange} />
                     </label>

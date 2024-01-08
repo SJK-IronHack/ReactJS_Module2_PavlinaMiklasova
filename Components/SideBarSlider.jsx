@@ -25,7 +25,7 @@ const {projects} =useContext(AllProjectContext)
                 {projects.map(project => (
                     <>
                     <li key={project.id}>
-                        <Link t={}> </Link>
+                        <Link to={`/projects/{project.id}`}> </Link>
                     </li>
                     </>
                 ))}
