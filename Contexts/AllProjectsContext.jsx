@@ -30,3 +30,5 @@ const AllProjectContextProvider = ({ children }) => {
   )
 
 }
+
+export default AllProjectContextProvider
