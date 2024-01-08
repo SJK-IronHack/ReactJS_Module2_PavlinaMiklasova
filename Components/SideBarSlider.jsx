@@ -4,6 +4,16 @@ import { Carousel } from '@mantine/carousel';
 
 
 function SideBarSlider() {
+
+    fetch("https://github.com/sonali582000/Module2-jsonBackendServer/blob/master/db.json")
+  .then((response) => { 
+    return response.json();
+  })
+  .then((data) => {
+    console.log("Parsed response: ", data);
+  })
+  .catch( (err) => console.log(err));
+
     return (
 
         <div style={{ height: '50vh', display: 'flex', backgroundColor:'white',color:"red"}}>
