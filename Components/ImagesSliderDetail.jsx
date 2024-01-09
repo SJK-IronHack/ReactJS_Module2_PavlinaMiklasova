@@ -1,4 +1,4 @@
-import { useParams, useState, useEffect } from "react-router-dom";
+// ~
 
 function ImagesSliderDetail() {
   const { projectId } = useParams();
