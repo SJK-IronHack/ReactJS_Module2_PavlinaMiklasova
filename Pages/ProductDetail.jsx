@@ -20,17 +20,11 @@ function ProductDetail (){
     <>
     <ImagesSliderDetail/>
     <h2>{project.title}</h2>
-    <section className='imageSlider'>
-{project.images.map((image)=> {
-    <>
-    <img key={project.id} src={`${images}`}/>
-    </>
-})
-}    </section>
 
     <section className='InfoBlat'>
         <p className="DescriptionText">{project.description}</p>
         <span className="YearText">{project.year}</span>
+        <span className="CreditsText">{project.credits}</span>
     </section>
     
     </>
