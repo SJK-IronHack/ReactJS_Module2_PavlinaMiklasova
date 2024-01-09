@@ -14,7 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<h1>Home Page</h1>} />
         <Route path="/:projectId" element={<ProductDetail />} />
-        <Route path="/add/:projectId" element={<AddItem />} />
+        <Route path="/add" element={<AddItem />} />
         <Route path="/update/:projectId" element={<EditItem />} />
         <Route path="*" element={"404 Page not found"} />
       </Routes>
