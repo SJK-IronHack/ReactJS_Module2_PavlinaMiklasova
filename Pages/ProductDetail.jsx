@@ -12,6 +12,19 @@ function ProductDetail() {
   useEffect(() => {
     setProject(projects(projectId));
   }, [projectId]);
+import AddItem from './AddItem';
+import EditItem from './EditItem';
+
+
+
+function ProductDetail (){
+    const { projects } = useContext(AllProjectContext);
+    const {projectId} = useParams()
+    const [project, setProject] = useState();
+    useEffect(()=> {
+        setProject(projects(projectId))
+    }, [projectId])
+
 
   return (
     <>

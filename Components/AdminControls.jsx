@@ -2,7 +2,6 @@ function AdminControls() {
     return (
 
         <>
-     
         </>
     )
 }
