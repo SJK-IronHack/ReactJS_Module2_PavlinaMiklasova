@@ -1,5 +1,6 @@
-import { useState } from 'react';
-import classes from '../Styles/DetailComponentStyles.modules.scss'
+import React, { useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import axios from "axios";
 const API_URL = "http://localhost:4000";
 
 
@@ -52,6 +53,8 @@ function AddItem() {
                     </label>
 
                 </div>
+                <button type="submit">Add new Project</button>
+
             </form>
         </>
     )

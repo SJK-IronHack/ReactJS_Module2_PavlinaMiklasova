@@ -4,8 +4,8 @@ import '../Styles/DetailComponentStyles.modules.scss'
 import { useEffect, useState } from 'react';
 import { useContext } from "react";
 import { AllProjectContext } from "../Contexts/AllProjectsContext";
-
-
+import AddItem from './AddItem';
+import EditItem from './EditItem';
 
 
 
@@ -29,7 +29,8 @@ function ProductDetail (){
         <span className="YearText">{project.year}</span>
         <span className="CreditsText">{project.credits}</span>
     </section>
-    <AdminControls/>
+    <AddItem/>
+    <EditItem/>
     </>
     )
 }

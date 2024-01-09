@@ -52,7 +52,7 @@ const EditItem = () => {
             onChange={(e) => setDescription(e.target.value)}
           />
 
-          <button type="submit">Update</button>
+          <button type="submit">Update the Project</button>
         </form>
       </div>
     </>
