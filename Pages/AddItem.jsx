@@ -76,6 +76,7 @@ function AddItem() {
             />
           </label>
         </div>
+        <button type="submit">Add the Project</button>
       </form>
     </>
   );
