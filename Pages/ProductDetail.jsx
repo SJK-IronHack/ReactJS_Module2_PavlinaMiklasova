@@ -3,6 +3,8 @@ import ImagesSliderDetail from '../Components/ImagesSliderDetail';
 import '../Styles/DetailComponentStyles.modules.scss'
 import { useEffect, useState } from 'react';
 import { useContext } from "react";
+import { AllProjectContext } from "../Contexts/AllProjectsContext";
+
 
 
 

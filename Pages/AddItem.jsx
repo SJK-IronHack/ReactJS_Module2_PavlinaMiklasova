@@ -1,9 +1,19 @@
+import { useState } from 'react';
 import classes from '../Styles/DetailComponentStyles.modules.scss'
 
 function AddItem() {
+    const [title, setTitle] = useState("");
+    const [description, setDescription] = useState("");
+    const [year, setYear] = useState("");
+    const [thumbnail, setThumbnail] = useState("");
+    const [image, setImage] = useState("");
+
+
+
+
     return (
         <>
-            <form className='addItemForm'>
+            <form className='addItemForm' onSubmit={handleFormSubmit}>
                 <h2>Hi user! Add new product</h2>
                 <div className='Inputs'>
                     <label>
@@ -26,7 +36,7 @@ function AddItem() {
                         Add Image
                         <input name="url" type="url" placeholder="Image URL" value={imgUrl} onChange={handleImgUrlChange} />
                     </label>
-    
+
                 </div>
             </form>
         </>
