@@ -3,6 +3,7 @@ import NavBar from "../Components/NavBar";
 import SideBarSlider from "../Components/SideBarSlider";
 import ProductDetail from "../Pages/ProductDetail";
 import EditItem from "../Pages/EditItem";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
@@ -10,7 +11,9 @@ function App() {
       <NavBar />
       <SideBarSlider />
       <ProductDetail />
-      <EditItem match={"03"} />
+      <Routes>
+        <EditItem />
+      </Routes>
     </>
   );
 }
