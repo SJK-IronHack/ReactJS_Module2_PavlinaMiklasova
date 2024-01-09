@@ -20,8 +20,13 @@ const AllProjectContextProvider = ({ children }) => {
     getAllProjects();
   }, []);
 
+  const getOneProduct = (projectId) => {
+    const OneProduct = projects.find((project) => project.id == projectId);
+    return OneProduct;
+  };
+
   return (
-    <AllProjectContext.Provider value={{ projects }}>
+    <AllProjectContext.Provider value={{ projects, getOneProduct }}>
       {children}
     </AllProjectContext.Provider>
   );
