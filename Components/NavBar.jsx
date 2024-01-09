@@ -5,7 +5,7 @@ function NavBar() {
   return (
     <>
       <Link to={`/`}>
-        <h1>Home</h1>
+        <h1>Navbar</h1>
       </Link>
     </>
   );

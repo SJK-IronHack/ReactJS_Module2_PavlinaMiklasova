@@ -1,23 +1,24 @@
 import { useState } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 //  import classes from "../Styles/DetailComponentStyles.modules.scss";
 const API_URL = "http://localhost:4000";
 
-function AddItem() {
+const AddItem = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [year, setYear] = useState("");
   const [thumbnail, setThumbnail] = useState("");
   const [images, setImages] = useState("");
+  const navigate = useNavigate();
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
     const requestData = { title, description, year, thumbnail, images };
-    axios
-      .POST(`${API_URL}/projects`, requestData)
-      .then((response) => {
-        alert("success");
-        navigate(`/${projectId}`);
-      });
+    axios.post(`${API_URL}/projects`, requestData).then((response) => {
+      alert("success");
+      navigate("/");
+    });
   };
 
   return (
@@ -40,7 +41,7 @@ function AddItem() {
             <input
               name="description"
               type="text"
-              placeholder="YProject Description"
+              placeholder="Project Description"
               value={description}
               onChange={(e) => setDescription(e.target.value)}
             />
@@ -80,5 +81,5 @@ function AddItem() {
       </form>
     </>
   );
-}
+};
 export default AddItem;

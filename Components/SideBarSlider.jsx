@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import "../Styles/SideBarSlider.modules.scss";
 import { Link } from "react-router-dom";
 import { Carousel } from "@mantine/carousel";
