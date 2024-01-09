@@ -1,16 +1,36 @@
+import { useParams } from 'react-router-dom';
 import ImagesSliderDetail from '../Components/ImagesSliderDetail';
 import '../Styles/DetailComponentStyles.modules.scss'
+import { useEffect, useState } from 'react';
+import { Carousel } from '@mantine/carousel';
+
 
 
 function ProductDetail (){
+    const { projects } = useContext(AllProjectContext);
+    const {projectId} = useParams()
+    const [project, setProject] = useState();
+    useEffect(()=> {
+        setProject(projects(projectId))
+    }, [projectId])
+
+
     return ( 
 
     <>
     <ImagesSliderDetail/>
-    <h2>Here comes the project.title</h2>
-    <section>
-        <p className="DescriptionText">Here comes project.description</p>
-        <p className="Yeartext">Here comes project.year</p>
+    <h2>{project.title}</h2>
+    <section className='imageSlider'>
+{project.images.map((image)=> {
+    <>
+    <img key={project.id} src={`${images}`}/>
+    </>
+})
+}    </section>
+
+    <section className='InfoBlat'>
+        <p className="DescriptionText">{project.description}</p>
+        <span className="YearText">{project.year}</span>
     </section>
     
     </>
