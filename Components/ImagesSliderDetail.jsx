@@ -1,16 +1,27 @@
 
 
-function ImagesSliderDetail (){
-    return ( 
+function ImagesSliderDetail() {
+    const { projectId } = useParams()
+    const [project, setProjectImage] = useState();
+    useEffect(() => {
+        setProjectImage(projects(projectId))
+    }, [projectId])
 
+
+    return (
+
+        <>
+        <section className='imageSlider'>
+{project.images.map((image)=> {
     <>
-    <h2>Here come project.imagesurl</h2>
-<img/>
-    
+    <img key={project.id} src={`${project.images}`}/>
     </>
+})
+}    </section>
+        </>
     )
 }
 
-export default ImagesSliderDetail 
+export default ImagesSliderDetail
 
 
