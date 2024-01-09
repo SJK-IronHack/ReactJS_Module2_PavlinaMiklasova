@@ -9,9 +9,9 @@ function App() {
   return (
     <>
       <NavBar />
+      <SideBarSlider />
       <Routes>
         <Route path="/" element={<h1>Home Page</h1>} />
-        <Route path="/projects" element={<SideBarSlider />} />
         <Route path="/projects/:projectId" element={<ProductDetail />} />
         <Route path="/projects/update" element={<EditItem />} />
         <Route path="*" element={"404 Page not found"} />
