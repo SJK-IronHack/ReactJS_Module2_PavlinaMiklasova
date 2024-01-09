@@ -9,14 +9,7 @@ function SideBarSlider() {
 
   return (
     <>
-      <div
-        style={{
-          height: "50vh",
-          display: "flex",
-          backgroundColor: "white",
-          color: "red",
-        }}
-      >
+      <div className="carouselHolder">
         <Carousel
           slideSize={{ base: "100%", sm: "50%", md: "33.333333%" }}
           height={200}
