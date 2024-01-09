@@ -29,7 +29,7 @@ function ProductDetail (){
         <span className="YearText">{project.year}</span>
         <span className="CreditsText">{project.credits}</span>
     </section>
-    
+    <AdminControls/>
     </>
     )
 }
