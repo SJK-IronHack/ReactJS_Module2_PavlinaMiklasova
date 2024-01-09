@@ -1,10 +1,27 @@
 // import classes from "../Styles/DetailComponentStyles.modules.scss";
 import React, { useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
+const API_URL = "http://localhost:4000";
 
 const EditItem = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
+  const { projectId } = useParams();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    // <== ADD
+    axios
+      .get(`${API_URL}/projects/${projectId}`)
+      .then((response) => {
+        const oneProject = response.data;
+        setTitle(oneProject.title);
+        setDescription(oneProject.description);
+      })
+      .catch((error) => console.log(error));
+  }, [projectId]);
+
   return (
     <>
       <div>
