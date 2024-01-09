@@ -2,7 +2,8 @@ import { useParams } from 'react-router-dom';
 import ImagesSliderDetail from '../Components/ImagesSliderDetail';
 import '../Styles/DetailComponentStyles.modules.scss'
 import { useEffect, useState } from 'react';
-import { Carousel } from '@mantine/carousel';
+import { useContext } from "react";
+
 
 
 

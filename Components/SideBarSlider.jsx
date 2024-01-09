@@ -25,7 +25,7 @@ function SideBarSlider() {
           {projects.map((project) => (
             <>
               <li key={project.id}>
-                <Link to={`/projects/${project.id}`}>{project.title} </Link>
+                <Link to={`/${project.id}`}>{project.title} </Link>
               </li>
             </>
           ))}

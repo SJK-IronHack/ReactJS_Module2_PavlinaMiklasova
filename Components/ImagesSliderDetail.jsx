@@ -2,9 +2,9 @@
 
 function ImagesSliderDetail() {
     const { projectId } = useParams()
-    const [project, setProject] = useState();
+    const [project, setProjectImage] = useState();
     useEffect(() => {
-        setProject(projects(projectId))
+        setProjectImage(projects(projectId))
     }, [projectId])
 
 
@@ -14,7 +14,7 @@ function ImagesSliderDetail() {
         <section className='imageSlider'>
 {project.images.map((image)=> {
     <>
-    <img key={project.id} src={`${images}`}/>
+    <img key={project.id} src={`${project.images}`}/>
     </>
 })
 }    </section>
