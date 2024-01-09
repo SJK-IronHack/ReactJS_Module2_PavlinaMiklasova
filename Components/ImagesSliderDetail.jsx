@@ -1,27 +1,23 @@
-
+import { useParams, useState, useEffect } from "react-router-dom";
 
 function ImagesSliderDetail() {
-    const { projectId } = useParams()
-    const [project, setProjectImage] = useState();
-    useEffect(() => {
-        setProjectImage(projects(projectId))
-    }, [projectId])
+  const { projectId } = useParams();
+  const [project, setProjectImage] = useState();
+  useEffect(() => {
+    setProjectImage(projects(projectId));
+  }, [projectId]);
 
-
-    return (
-
-        <>
-        <section className='imageSlider'>
-{project.images.map((image)=> {
+  return (
     <>
-    <img key={project.id} src={`${project.images}`}/>
+      <section className="imageSlider">
+        {project.images.map((image) => {
+          <>
+            <img key={project.id} src={`${project.images}`} />
+          </>;
+        })}{" "}
+      </section>
     </>
-})
-}    </section>
-        </>
-    )
+  );
 }
 
-export default ImagesSliderDetail
-
-
+export default ImagesSliderDetail;
