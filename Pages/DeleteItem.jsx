@@ -5,17 +5,23 @@ import axios from "axios";
 const API_URL = "http://localhost:4000";
 
 
-function DeleteButton(){
+function DeleteButton() {
 
     const handleDelete = (e) => {
         e.preventDefault();
         const requestData = { title, description, year, thumbnail, images };
         axios
-          .DELETE(`${API_URL}/projects/${projectId}`, requestData)
-          .then((response) => {
-            alert("success");
-            navigate(`/`);
-          });
-      }
+            .DELETE(`${API_URL}/projects/${projectId}`, requestData)
+            .then((response) => {
+                alert("success");
+                navigate(`/`);
+            });
+    }
+    return (
+        <button type="submit" onClick={handleDelete}>Add the Project</button>
+
+    )
 
 } 
+
+export default DeleteButton;
