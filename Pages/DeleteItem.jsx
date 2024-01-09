@@ -18,7 +18,7 @@ function DeleteButton() {
             });
     }
     return (
-        <button type="submit" onClick={handleDelete}>Add the Project</button>
+        <button type="submit" onClick={handleDelete}>Delete the Project</button>
 
     )
 

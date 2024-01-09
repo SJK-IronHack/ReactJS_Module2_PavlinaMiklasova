@@ -13,7 +13,7 @@ function AddItem() {
     e.preventDefault();
     const requestData = { title, description, year, thumbnail, images };
     axios
-      .POST(`${API_URL}/projects/${projectId}`, requestData)
+      .POST(`${API_URL}/projects`, requestData)
       .then((response) => {
         alert("success");
         navigate(`/${projectId}`);
