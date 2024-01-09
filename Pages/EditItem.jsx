@@ -11,7 +11,6 @@ const EditItem = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // <== ADD
     axios
       .get(`${API_URL}/projects/${projectId}`)
       .then((response) => {
@@ -22,11 +21,22 @@ const EditItem = () => {
       .catch((error) => console.log(error));
   }, [projectId]);
 
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    const requestData = { title, description };
+    axios
+      .PUT(`${API_URL}/projects/${projectId}`, requestData)
+      .then((response) => {
+        alert("success");
+        navigate(`/${projectId}`);
+      });
+  };
+
   return (
     <>
       <div>
         <h3>Edit the Project</h3>
-        <form>
+        <form onSubmit={handleFormSubmit}>
           <label>Project Title:</label>
           <input
             type="text"
@@ -42,7 +52,7 @@ const EditItem = () => {
             onChange={(e) => setDescription(e.target.value)}
           />
 
-          <button type="submit">Update Project</button>
+          <button type="submit">Update</button>
         </form>
       </div>
     </>
