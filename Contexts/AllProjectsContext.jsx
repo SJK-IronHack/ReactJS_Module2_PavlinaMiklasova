@@ -18,10 +18,6 @@ const AllProjectContextProvider = ({ children }) => {
   };
   useEffect(() => {
     getAllProjects();
-    const intervalId = setInterval(() => {
-      getAllProjects();
-    }, 3000);
-    return () => clearInterval(intervalId);
   }, []);
 
   const getOneProduct = (projectId) => {
