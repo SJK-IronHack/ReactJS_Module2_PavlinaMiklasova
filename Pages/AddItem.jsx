@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 //  import classes from "../Styles/DetailComponentStyles.modules.scss";
-const API_URL = "http://localhost:4000";
+// const API_URL = "http://localhost:4000";
 
 const AddItem = () => {
   const [title, setTitle] = useState("");
