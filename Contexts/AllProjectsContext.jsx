@@ -9,7 +9,7 @@ const AllProjectContextProvider = ({ children }) => {
 
   const getAllProjects = () => {
     axios
-      .get(`${import.meta.env.VITE_API_URL}`)
+      .get(`${import.meta.env.VITE_API_URL}/projects`)
       .then((response) => {
         //console.log(response.data);
         setProjects(response.data);
