@@ -37,18 +37,19 @@ function ProductDetail() {
       {project && <p>{project.description}</p>}
       {project && <p>{project.title}</p>}
       {project && <p>{project.thumbnail}</p>}
-
-      <button onClick={handleDeleteProject}>Delete Project</button>
-      <br></br>
-      {/* Links buttons add/update  */}
-      <button type="button" onClick={handleAddClick}>
-        {addComponent && navigate("/add")}
-        Add new Project
-      </button>
-      <button type="button" onClick={handleEditClick}>
-        {editComponent && navigate(`/update/${projectId}`)}
-        Edit Project
-      </button>
+      <div className="ButtonsWrapper">
+        <button onClick={handleDeleteProject}>Delete Project</button>
+        <br></br>
+        {/* Links buttons add/update  */}
+        <button type="button" onClick={handleAddClick}>
+          {addComponent && navigate("/add")}
+          Add new Project
+        </button>
+        <button type="button" onClick={handleEditClick}>
+          {editComponent && navigate(`/update/${projectId}`)}
+          Edit Project
+        </button>
+      </div>
     </>
   );
 }

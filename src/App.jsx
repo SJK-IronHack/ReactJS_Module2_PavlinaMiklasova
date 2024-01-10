@@ -8,7 +8,7 @@ import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <>
+    <div className="AppWrapper">
       <NavBar />
       <SideBarSlider />
       <Routes>
@@ -18,7 +18,7 @@ function App() {
         <Route path="/update/:projectId" element={<EditItem />} />
         <Route path="*" element={"404 Page not found"} />
       </Routes>
-    </>
+    </div >
   );
 }
 

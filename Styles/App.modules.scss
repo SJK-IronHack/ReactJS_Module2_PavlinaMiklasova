@@ -1,7 +1,17 @@
+@import './MixinsVariables.modules.scss';
+
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  max-width: 100vw;
+  font-family: "GC";
 }
+
+.AppWrapper {
+  display: grid; 
+  grid-template-columns: repeat(5, 1fr); 
+  grid-template-rows: repeat(5, 1fr); 
+  grid-column-gap: 0px;
+  grid-row-gap: 0px; 
+  }
+
+
 

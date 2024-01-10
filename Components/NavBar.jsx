@@ -3,11 +3,11 @@ import "../Styles/NavBar.modules.scss";
 
 function NavBar() {
   return (
-    <>
+    <div className="NavBar">
       <Link to={`/`}>
-        <h1>Navbar</h1>
+        <h1>Pavlina Miklasova</h1>
       </Link>
-    </>
+    </div>
   );
 }
 
