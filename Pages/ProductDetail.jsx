@@ -1,10 +1,11 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { AllProjectContext } from "../Contexts/AllProjectsContext";
 import { useContext, useEffect, useState } from "react";
 // import "../Styles/DetailComponentStyles.modules.scss";
 import DeleteItem from './DeleteItem'
 import AddItem from "./AddItem";
 import EditItem from "./EditItem";
+
 
 function ProductDetail() {
   const { projectId } = useParams();
@@ -37,8 +38,15 @@ function ProductDetail() {
       {project && <p>{project.description}</p>}
       {project && <p>{project.title}</p>}
       <button type="submit" onClick={handleDelete}>Delete the Project</button>
-      <AddItem/>
+
       <EditItem/> 
+      <Link to={`/add`}>
+        <button type="button"> Add new Project</button>
+      </Link>
+
+      <Link to={`/update/:projectId`}>
+        <button type="button"> Edit the Project</button>
+      </Link>
     </>
   );
 }
