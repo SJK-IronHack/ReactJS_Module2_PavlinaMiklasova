@@ -2,7 +2,7 @@ import "../Styles/DetailComponentStyles.modules.scss";
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
-// const API_URL = "http://localhost:4000";
+const API_URL = "http://localhost:4000";
 
 const EditItem = () => {
   const [title, setTitle] = useState("");
@@ -25,7 +25,7 @@ const EditItem = () => {
     e.preventDefault();
     const requestData = { title, description };
     axios
-      .put(`${import.meta.env.VITE_API_URL}/projects/${projectId}`, requestData)
+      .put(`${API_URL}/projects/${projectId}`, requestData)
       .then((response) => {
         alert("success");
         navigate(`/${projectId}`);
@@ -34,7 +34,7 @@ const EditItem = () => {
 
   return (
     <>
-      <div>
+      <div className="FormWrapper">
         <h3>Edit the Project</h3>
         <form onSubmit={handleFormSubmit}>
           <label>Project Title:</label>
