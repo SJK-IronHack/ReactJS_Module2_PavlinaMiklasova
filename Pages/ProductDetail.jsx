@@ -1,55 +1,56 @@
-import { useParams, Link } from "react-router-dom";
+import { Navigate, useNavigate, useParams } from "react-router-dom";
 import { AllProjectContext } from "../Contexts/AllProjectsContext";
 import { useContext, useEffect, useState } from "react";
 // import "../Styles/DetailComponentStyles.modules.scss";
-import DeleteItem from './DeleteItem'
+import DeleteItem from "./DeleteItem";
 import AddItem from "./AddItem";
 import EditItem from "./EditItem";
-
+import axios from "axios";
+const API_URL = "http://localhost:4000";
 
 function ProductDetail() {
   const { projectId } = useParams();
   const { getOneProduct } = useContext(AllProjectContext);
   const [project, setProject] = useState({});
+  const [addComponent, setaddComponent] = useState(false);
+  const [editComponent, seteditComponent] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     setProject(getOneProduct(projectId));
   }, [projectId]);
 
-  const handleDelete = (e) => {
-    e.preventDefault();
-    const requestData = { title, description, year, thumbnail, images };
+  const handleAddClick = () => {
+    setaddComponent(!addComponent);
+  };
 
-    axios
-      .delete(`${API_URL}/projects/${projectId}`, { data: requestData })
-      .then((response) => {
-        alert("Success");
-        navigate(`/`);
-      })
-      .catch((error) => {
-        console.error("Error deleting project:", error);
-      });
+  const handleEditClick = () => {
+    seteditComponent(!editComponent);
+  };
+
+  const handleDeleteProject = () => {
+    axios.delete(`${API_URL}/projects/${projectId}`).then(() => {
+      navigate("/");
+    });
   };
 
   return (
     <>
-    
       <p>{projectId}</p>
       {project && <p>{project.description}</p>}
       {project && <p>{project.title}</p>}
-      <button type="submit" onClick={handleDelete}>Delete the Project</button>
 
-      <AddItem/>
-      <EditItem/> 
-
-       {/* Links buttons add/update  */}
-      <Link to={`/add`}>
-        <button type="button"> Add new Project</button>
-      </Link>
-
-      <Link to={`/update/:projectId`}>
-        <button type="button"> Edit the Project</button>
-      </Link>
+      <button onClick={handleDeleteProject}>Delete Project</button>
+      <br></br>
+      {/* Links buttons add/update  */}
+      <button type="button" onClick={handleAddClick}>
+        {addComponent && navigate("/add")}
+        Add new Project
+      </button>
+      <button type="button" onClick={handleEditClick}>
+        {editComponent && navigate(`/update/${projectId}`)}
+        Edit Project
+      </button>
     </>
   );
 }
