@@ -1,10 +1,7 @@
-import { Navigate, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { AllProjectContext } from "../Contexts/AllProjectsContext";
 import { useContext, useEffect, useState } from "react";
 // import "../Styles/DetailComponentStyles.modules.scss";
-import DeleteItem from "./DeleteItem";
-import AddItem from "./AddItem";
-import EditItem from "./EditItem";
 import axios from "axios";
 const API_URL = "http://localhost:4000";
 
