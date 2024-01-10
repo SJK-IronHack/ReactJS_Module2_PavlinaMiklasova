@@ -39,7 +39,10 @@ function ProductDetail() {
       {project && <p>{project.title}</p>}
       <button type="submit" onClick={handleDelete}>Delete the Project</button>
 
+      <AddItem/>
       <EditItem/> 
+
+       {/* Links buttons add/update  */}
       <Link to={`/add`}>
         <button type="button"> Add new Project</button>
       </Link>
