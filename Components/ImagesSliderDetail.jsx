@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-const API_URL = "http://localhost:4000";
+// const API_URL = "http://localhost:4000";
 
 const ImagesSliderDetail = () => {
   const [imageData, setImageData] = useState([]);
@@ -11,7 +11,7 @@ const ImagesSliderDetail = () => {
     const fetchData = async () => {
       try {
         // Replace the URL with the actual URL hosting your JSON file
-        const response = await axios.get(`${API_URL}`);
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}`);
 
         // Check if response.data.projects is an array
 
@@ -36,8 +36,8 @@ const ImagesSliderDetail = () => {
       <h2>Image Gallery</h2>
       {imageData.map((item, index) => (
         <div key={index}>
-      {project && <img src={project.thumbnail}/>}
-      <div>
+          {project && <img src={project.thumbnail} />}
+          <div>
             {Object.values(item.images).map((imageUrl, i) => (
               <img key={i} src={imageUrl} alt={`Image ${index + 1}.${i + 1}`} />
             ))}

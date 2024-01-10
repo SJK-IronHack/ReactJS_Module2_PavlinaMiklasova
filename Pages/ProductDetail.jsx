@@ -5,7 +5,7 @@ import "../Styles/DetailComponentStyles.modules.scss";
 
 import axios from "axios";
 import ImagesSliderDetail from "../Components/ImagesSliderDetail";
-const API_URL = "http://localhost:4000";
+// const API_URL = "http://localhost:4000";
 
 function ProductDetail() {
   const { projectId } = useParams();
@@ -28,9 +28,11 @@ function ProductDetail() {
   };
 
   const handleDeleteProject = () => {
-    axios.delete(`${API_URL}/projects/${projectId}`).then(() => {
-      navigate("/");
-    });
+    axios
+      .delete(`${import.meta.env.VITE_API_URL}/projects/${projectId}`)
+      .then(() => {
+        navigate("/");
+      });
   };
 
   return (
@@ -40,7 +42,7 @@ function ProductDetail() {
       {project && <p>{project.title}</p>}
       {/* {project && <img src={project.thumbnail}/>} */}
 
-<ImagesSliderDetail/>
+      <ImagesSliderDetail />
 
       <div className="ButtonsWrapper">
         <button onClick={handleDeleteProject}>Delete Project</button>

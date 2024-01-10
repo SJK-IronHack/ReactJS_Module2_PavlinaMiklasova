@@ -15,10 +15,12 @@ const AddItem = () => {
   const handleFormSubmit = (e) => {
     e.preventDefault();
     const requestData = { title, description, year, thumbnail, images };
-    axios.post(`${API_URL}/projects`, requestData).then((response) => {
-      alert("success");
-      navigate("/");
-    });
+    axios
+      .post(`${import.meta.env.VITE_API_URL}/projects`, requestData)
+      .then((response) => {
+        alert("success");
+        navigate("/");
+      });
   };
 
   return (

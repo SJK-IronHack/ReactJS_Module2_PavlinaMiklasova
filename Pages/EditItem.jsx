@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
-const API_URL = "http://localhost:4000";
+// const API_URL = "http://localhost:4000";
 
 const EditItem = () => {
   const [title, setTitle] = useState("");
@@ -25,7 +25,7 @@ const EditItem = () => {
     e.preventDefault();
     const requestData = { title, description };
     axios
-      .put(`${API_URL}/projects/${projectId}`, requestData)
+      .put(`${import.meta.env.VITE_API_URL}/projects/${projectId}`, requestData)
       .then((response) => {
         alert("success");
         navigate(`/${projectId}`);

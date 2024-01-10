@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import axios from "axios";
-const API_URL = "http://localhost:4000/projects";
+// const API_URL = "http://localhost:4000/projects";
 
 export const AllProjectContext = createContext();
 
@@ -9,7 +9,7 @@ const AllProjectContextProvider = ({ children }) => {
 
   const getAllProjects = () => {
     axios
-      .get(`${API_URL}`)
+      .get(`${import.meta.env.VITE_API_URL}`)
       .then((response) => {
         //console.log(response.data);
         setProjects(response.data);
