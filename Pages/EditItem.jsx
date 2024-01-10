@@ -25,7 +25,7 @@ const EditItem = () => {
     e.preventDefault();
     const requestData = { title, description };
     axios
-      .put(`${API_URL}/projects/${projectId}`, requestData)
+      .put(`${import.meta.env.VITE_API_URL}/projects/${projectId}`, requestData)
       .then((response) => {
         alert("success");
         navigate(`/${projectId}`);
