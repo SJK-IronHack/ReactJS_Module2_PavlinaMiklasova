@@ -2,7 +2,7 @@ import "../Styles/DetailComponentStyles.modules.scss";
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
-const API_URL = "http://localhost:4000";
+// const API_URL = "http://localhost:4000";
 
 const EditItem = () => {
   const [title, setTitle] = useState("");
@@ -12,7 +12,7 @@ const EditItem = () => {
 
   useEffect(() => {
     axios
-      .get(`${API_URL}/projects/${projectId}`)
+      .get(`${import.meta.env.VITE_API_URL}/projects/${projectId}`)
       .then((response) => {
         const oneProject = response.data;
         setTitle(oneProject.title);
