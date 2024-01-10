@@ -31,7 +31,7 @@ const EditItem = () => {
       .then((response) => {
         setNeedUpdate(true);
         alert("success");
-        navigate(`/${projectId}`);
+        navigate(`/`);
       });
   };
 
