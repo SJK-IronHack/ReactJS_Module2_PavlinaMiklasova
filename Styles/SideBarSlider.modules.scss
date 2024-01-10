@@ -1,0 +1,14 @@
+@import './MixinsVariables.modules.scss';
+
+
+.SideBarWrapper {
+    color: $text-color;
+
+    :link {
+        text-decoration: none;
+        color: black;
+    
+        :visited {
+        }
+    }
+}
