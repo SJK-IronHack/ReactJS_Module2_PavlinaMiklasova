@@ -1,4 +1,4 @@
-// import classes from "../Styles/DetailComponentStyles.modules.scss";
+import "../Styles/DetailComponentStyles.modules.scss";
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
