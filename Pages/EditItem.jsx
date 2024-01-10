@@ -1,7 +1,8 @@
 import "../Styles/DetailComponentStyles.modules.scss";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
+import { AllProjectContext } from "../Contexts/AllProjectsContext";
 // const API_URL = "http://localhost:4000";
 
 const EditItem = () => {
@@ -9,6 +10,7 @@ const EditItem = () => {
   const [description, setDescription] = useState("");
   const { projectId } = useParams();
   const navigate = useNavigate();
+  const { setNeedUpdate } = useContext(AllProjectContext);
 
   useEffect(() => {
     axios
@@ -27,6 +29,7 @@ const EditItem = () => {
     axios
       .put(`${import.meta.env.VITE_API_URL}/projects/${projectId}`, requestData)
       .then((response) => {
+        setNeedUpdate(true);
         alert("success");
         navigate(`/${projectId}`);
       });

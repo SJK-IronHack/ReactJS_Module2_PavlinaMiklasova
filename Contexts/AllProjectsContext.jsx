@@ -6,19 +6,22 @@ export const AllProjectContext = createContext();
 
 const AllProjectContextProvider = ({ children }) => {
   const [projects, setProjects] = useState([]);
-
+  const [needUpdate, setNeedUpdate] = useState(true);
   const getAllProjects = () => {
     axios
       .get(`${import.meta.env.VITE_API_URL}/projects`)
       .then((response) => {
         //console.log(response.data);
         setProjects(response.data);
+        setNeedUpdate(false);
       })
       .catch((error) => console.log(error));
   };
   useEffect(() => {
-    getAllProjects();
-  }, []);
+    if (needUpdate) {
+      getAllProjects();
+    }
+  }, [needUpdate]);
 
   const getOneProduct = (projectId) => {
     const OneProduct = projects.find((project) => project.id == projectId);
@@ -26,7 +29,9 @@ const AllProjectContextProvider = ({ children }) => {
   };
 
   return (
-    <AllProjectContext.Provider value={{ projects, getOneProduct }}>
+    <AllProjectContext.Provider
+      value={{ projects, getOneProduct, needUpdate, setNeedUpdate }}
+    >
       {children}
     </AllProjectContext.Provider>
   );
