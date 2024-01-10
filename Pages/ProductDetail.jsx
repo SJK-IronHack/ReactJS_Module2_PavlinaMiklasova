@@ -36,7 +36,7 @@ function ProductDetail() {
       <p>{projectId}</p>
       {project && <p>{project.description}</p>}
       {project && <p>{project.title}</p>}
-
+<div className="ButtonsWrapper">
       <button onClick={handleDeleteProject}>Delete Project</button>
       <br></br>
       {/* Links buttons add/update  */}
@@ -48,6 +48,7 @@ function ProductDetail() {
         {editComponent && navigate(`/update/${projectId}`)}
         Edit Project
       </button>
+</div>
     </>
   );
 }

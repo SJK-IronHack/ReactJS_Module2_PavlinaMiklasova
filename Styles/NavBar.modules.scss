@@ -1,0 +1,17 @@
+.NavBar {
+    width: 100%;
+    background-color: aqua;
+    text-align: justify;
+
+
+    h1 {
+        text-align: justify;
+        
+
+    }
+    :after {
+        content: "";
+        display: inline-block;
+        width: 100%;
+      }
+}
