@@ -37,7 +37,7 @@ function ProductDetail() {
       <p>{projectId}</p>
       {project && <p>{project.description}</p>}
       {project && <p>{project.title}</p>}
-      {project && <p>{project.thumbnail}</p>}
+      {project && <img src={project.thumbnail}/>}
       <div className="ButtonsWrapper">
         <button onClick={handleDeleteProject}>Delete Project</button>
         <br></br>
