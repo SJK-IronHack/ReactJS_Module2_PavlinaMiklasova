@@ -4,6 +4,7 @@ import { useContext, useEffect, useState } from "react";
 import "../Styles/DetailComponentStyles.modules.scss";
 
 import axios from "axios";
+import ImagesSliderDetail from "../Components/ImagesSliderDetail";
 const API_URL = "http://localhost:4000";
 
 function ProductDetail() {
@@ -37,7 +38,10 @@ function ProductDetail() {
       <p>{projectId}</p>
       {project && <p>{project.description}</p>}
       {project && <p>{project.title}</p>}
-      {project && <img src={project.thumbnail}/>}
+      {/* {project && <img src={project.thumbnail}/>} */}
+
+<ImagesSliderDetail/>
+
       <div className="ButtonsWrapper">
         <button onClick={handleDeleteProject}>Delete Project</button>
         <br></br>

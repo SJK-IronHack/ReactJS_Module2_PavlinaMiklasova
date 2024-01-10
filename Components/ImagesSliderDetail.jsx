@@ -36,8 +36,8 @@ const ImagesSliderDetail = () => {
       <h2>Image Gallery</h2>
       {imageData.map((item, index) => (
         <div key={index}>
-          <img src={item.thumbnail} alt={`Thumbnail ${index + 1}`} />
-          <div>
+      {project && <img src={project.thumbnail}/>}
+      <div>
             {Object.values(item.images).map((imageUrl, i) => (
               <img key={i} src={imageUrl} alt={`Image ${index + 1}.${i + 1}`} />
             ))}
