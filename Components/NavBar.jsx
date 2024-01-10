@@ -3,7 +3,7 @@ import "../Styles/NavBar.modules.scss";
 
 function NavBar() {
   return (
-    <div className="NavBar">
+    <div className="NavBarWrapper">
       <Link to={`/`}>
         <h1>Pavlina Miklasova</h1>
       </Link>

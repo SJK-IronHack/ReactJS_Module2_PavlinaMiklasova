@@ -1,7 +1,8 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { AllProjectContext } from "../Contexts/AllProjectsContext";
 import { useContext, useEffect, useState } from "react";
-// import "../Styles/DetailComponentStyles.modules.scss";
+import "../Styles/DetailComponentStyles.modules.scss";
+
 import axios from "axios";
 const API_URL = "http://localhost:4000";
 
@@ -32,7 +33,7 @@ function ProductDetail() {
   };
 
   return (
-    <>
+    <div className="ProductDetailWrapper">
       <p>{projectId}</p>
       {project && <p>{project.description}</p>}
       {project && <p>{project.title}</p>}
@@ -50,7 +51,7 @@ function ProductDetail() {
           Edit Project
         </button>
       </div>
-    </>
+    </div>
   );
 }
 

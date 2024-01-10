@@ -1,0 +1,14 @@
+.ProductDetailWrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+
+}
+.ButtonsWrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+justify-content: left;
+}

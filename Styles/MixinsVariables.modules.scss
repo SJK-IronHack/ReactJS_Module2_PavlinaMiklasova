@@ -3,3 +3,18 @@
     src: url("/src/gc16_Mono.woff");
   }
 
+@mixin H1 {
+  font-size: 9.3vw;
+  text-decoration: none !important;
+  text-wrap: nowrap !important;
+  line-height: 3vh !important;
+  color: $text-color;
+
+
+}
+
+// VAR
+
+$base-color: #fff;
+
+$text-color:#000;

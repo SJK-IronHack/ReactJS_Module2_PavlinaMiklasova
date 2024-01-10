@@ -1,12 +1,23 @@
-.NavBar {
+@import './MixinsVariables.modules.scss';
+
+
+.NavBarWrapper {
     width: 100%;
-    background-color: aqua;
+    background-color: $base-color;
     text-align: justify;
+    height: 10vh;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
 
 
     h1 {
         text-align: justify;
-        
+        @include H1();
+
+
+
 
     }
     :after {
@@ -14,4 +25,11 @@
         display: inline-block;
         width: 100%;
       }
+      :link {
+    text-decoration: none;
+    color: black;
+
+    :visited {
+    }
+}
 }

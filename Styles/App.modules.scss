@@ -3,15 +3,76 @@
 #root {
   max-width: 100vw;
   font-family: "GC";
+
+}
+// DESKTOP
+@media only screen and (min-width: 700px) {
+  .AppWrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
 }
 
-.AppWrapper {
-  display: grid; 
-  grid-template-columns: repeat(5, 1fr); 
-  grid-template-rows: repeat(5, 1fr); 
-  grid-column-gap: 0px;
-  grid-row-gap: 0px; 
+.NavBarWrapper {
+  grid-area: 1 / 1 / 2 / 6;
+}
+
+.SideBarWrapper {
+  grid-area: 3 / 1 / 6 / 2;
+}
+
+.ProductDetailWrapper {
+  grid-area: 3 / 2 / 6 / 6;
+}
+//  MOBILE
+@media only screen and (max-width: 700px) {
+  .AppWrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
   }
 
+  .NavBarWrapper {
+    grid-area: 1 / 1 / 2 / 6;
+  }
 
+  .SideBarWrapper {
+    grid-area: 2 / 1 / 3 / 6;
+  }
 
+  .ProductDetailWrapper {
+    grid-area: 3 / 1 / 6 / 6;
+
+  }
+
+}
+// GENERAL
+:link {
+  text-decoration: none;
+  color: black;
+
+  :visited {
+    color: $text-color;
+
+  }
+}
+
+button {
+  all: unset;
+  border: 1px solid $text-color;
+  text-wrap: nowrap;
+  padding: 8px 24px;
+  margin-inline-end: 16px;
+  cursor: pointer;
+
+}
+
+button:hover {
+  color: $base-color;
+  background-color: $text-color;
+}
