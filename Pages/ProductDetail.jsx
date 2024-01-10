@@ -36,6 +36,7 @@ function ProductDetail() {
       <p>{projectId}</p>
       {project && <p>{project.description}</p>}
       {project && <p>{project.title}</p>}
+      {project && <p>{project.thumbnail}</p>}
 
       <button onClick={handleDeleteProject}>Delete Project</button>
       <br></br>
