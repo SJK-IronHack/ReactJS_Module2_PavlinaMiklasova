@@ -51,13 +51,15 @@
 
   .NavBarWrapper {
     position: sticky;
-    grid-row: 1 /2;
+    grid-row: 1/2;
+    width: 100%;
 }
 
   .SideBarWrapper {
-    grid-row: 2 /3;
-
-
+    grid-row: 2/3;
+    grid-column: 1/6;;
+    width: 100%;
+    overflow-x: scroll;
   }
 
   .ProductDetailWrapper {
