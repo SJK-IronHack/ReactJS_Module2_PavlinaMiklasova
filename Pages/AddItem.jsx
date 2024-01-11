@@ -1,6 +1,8 @@
-import { useState } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { AllProjectContext } from "../Contexts/AllProjectsContext";
+
 //  import classes from "../Styles/DetailComponentStyles.modules.scss";
 // const API_URL = "http://localhost:4000";
 
@@ -11,6 +13,7 @@ const AddItem = () => {
   const [thumbnail, setThumbnail] = useState("");
   const [images, setImages] = useState("");
   const navigate = useNavigate();
+  const { setNeedUpdate } = useContext(AllProjectContext);
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
@@ -18,7 +21,8 @@ const AddItem = () => {
     axios
       .post(`${import.meta.env.VITE_API_URL}/projects`, requestData)
       .then((response) => {
-        alert("success");
+        setNeedUpdate(true);
+        alert("You've added the new project");
         navigate("/");
       });
   };

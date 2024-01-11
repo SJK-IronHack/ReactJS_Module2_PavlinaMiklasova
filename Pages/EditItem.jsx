@@ -30,7 +30,7 @@ const EditItem = () => {
       .put(`${import.meta.env.VITE_API_URL}/projects/${projectId}`, requestData)
       .then((response) => {
         setNeedUpdate(true);
-        alert("success");
+        alert("You've edited the project");
         navigate(`/`);
       });
   };
