@@ -3,12 +3,41 @@
 
 .SideBarWrapper {
     color: $text-color;
+    display: flex;
+    flex-direction: column;
+    gap:8px;
+    overflow-y: scroll ;
 
+    ul {
+        padding: 0px;
+        margin: 0px;
+        list-style: none;
+        color: black;
+
+        .SideBarItem {
+            padding: 0px;
+        }
+    }
+
+.SideBarItem {
+    margin: 0;
+
+}
+li{
+    list-style: none;
     :link {
         text-decoration: none;
         color: black;
     
-        :visited {
-        }
     }
+        :visited {
+            color: black;
+        }
 }
+}
+    .ImgThumnail{
+        width: 100%;
+    }
+
+
+

@@ -1,0 +1,17 @@
+@import './MixinsVariables.modules.scss';
+ .ImageCarousel {
+    height: 60vh;
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    overflow-x: scroll;
+
+    li{
+        list-style: none;
+    }
+
+    img {
+        height: 100%;
+        object-fit: fill;
+    }
+ }

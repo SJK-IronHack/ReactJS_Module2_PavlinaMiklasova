@@ -10,12 +10,16 @@ function SideBarSlider() {
   return (
     <>
       <div className="SideBarWrapper">
-        {console.log(projects)}
+        <ul>
         {projects.map((project) => (
-          <li key={project.id}>
-            <Link to={`/${project.id}`}>{project.title} </Link>
+          <li key={project.id} className="SideBarItem">
+            <Link to={`/${project.id}`}>
+            <img src={project.thumbnail} className="ImgThumnail"/>
+             <p>{project.title} </p> 
+            </Link>
           </li>
         ))}
+        </ul>
       </div>
     </>
   );

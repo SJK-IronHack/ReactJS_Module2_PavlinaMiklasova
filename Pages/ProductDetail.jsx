@@ -37,12 +37,11 @@ function ProductDetail() {
 
   return (
     <div className="ProductDetailWrapper">
-      <p>{projectId}</p>
-      {project && <p>{project.description}</p>}
-      {project && <p>{project.title}</p>}
-      {/* {project && <img src={project.thumbnail}/>} */}
+      <ImagesSliderDetail className="ImgSlider"/>
 
-      <ImagesSliderDetail />
+      {project && <h3>{project.title}</h3>}
+      {project && <p>{project.description}</p>}
+  
 
       <div className="ButtonsWrapper">
         <button onClick={handleDeleteProject}>Delete Project</button>

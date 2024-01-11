@@ -1,6 +1,13 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { Carousel } from '@mantine/carousel';
+import { Image } from '@mantine/core';
+
+import "../Styles/ImageCarouselProject.modules.scss"
+
+
+
 // const API_URL = "http://localhost:4000";
 
 const ImagesSliderDetail = () => {
@@ -31,22 +38,13 @@ setProject(response.data);
   }, [projectId]); // Empty dependency array to run the effect only once on mount
 
   return (
-    <div>
-      {/* <h2>Image Gallery</h2>
-      {imageData.map((item, index) => (
-        <div key={index}>
-          {project && <img src={project.thumbnail} />}
-          <div>
-       {imageData.map((image, index) => {
-        return ( <img src={image.url} key={index}/>)
-       })}
-          </div>
-        </div>
-      ))} */}
+    <div className="ImageCarousel">
       {project ? (project.images.map((image, index) =>{
-        console.log(image);
         return (
-          <img src={image.url} key={index}  alt="img not working" style={{height:"100px"}}/>
+          <li key={index}>
+            <Image src={image.url}  alt="img not working"/>
+          </li>
+         
         )
       }) ): null}
     </div>
