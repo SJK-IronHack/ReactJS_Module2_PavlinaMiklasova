@@ -5,8 +5,8 @@
     color: $text-color;
     display: flex;
     flex-direction: column;
-    gap:8px;
-    overflow-y: scroll ;
+    gap: 8px;
+    overflow-y: scroll;
 
     ul {
         padding: 0px;
@@ -19,25 +19,71 @@
         }
     }
 
-.SideBarItem {
-    margin: 0;
+    .SideBarItem {
+        margin: 0;
 
-}
-li{
-    list-style: none;
-    :link {
-        text-decoration: none;
-        color: black;
-    
     }
+
+    li {
+        list-style: none;
+
+        :link {
+            text-decoration: none;
+            color: black;
+
+        }
+
         :visited {
             color: black;
         }
-}
-}
-    .ImgThumnail{
-        width: 100%;
     }
+}
+
+.ImgThumnail {
+    width: 100%;
+}
+
+// MOBILE
+
+@media only screen and (max-width: 700px) {
+
+    .SideBarWrapper {
+        color: $text-color;
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+        overflow-x: scroll;
+        background-color: aqua;
+        height: 100%;
 
 
+        ul {
+            padding: 0px;
+            margin: 0px;
+            list-style: none;
+            color: black;
+            display: flex;
+            flex-direction: row;
+            gap: 8px;
+            height: 100%;
 
+
+            .SideBarItem {
+                padding: 0px;
+                height: 100%;
+
+                p{
+                    display: none;
+                }
+            }
+
+            .SideBarItem {
+                height: auto;
+            }
+
+            .ImgThumnail {
+                width: 100%;
+            }
+        }
+    }
+}
