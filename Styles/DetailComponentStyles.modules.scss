@@ -18,6 +18,7 @@
             height: 400px;
         }
     }
+
     .ButtonsWrapper {
         width: 100%;
         display: flex;
@@ -25,15 +26,18 @@
         flex-direction: row;
         justify-content: left;
     }
+
     .ImageCarousel {
         height: 60vh;
         display: flex;
         flex-direction: row;
         gap: 0px;
         overflow-x: scroll;
+
         li {
             list-style: none;
         }
+
         img {
             height: 100%;
             object-fit: fill;
@@ -84,13 +88,12 @@
 // MOBILE
 @media only screen and (max-width: 700px) {
     .ProductDetailWrapper {
-        width: 100%;
         height: auto;
         overflow-y: scroll;
     }
 
     .ImageCarousel {
-        height: 50vh;
+        height: 40vh;
         display: flex;
         flex-direction: row;
         gap: 0px;
@@ -114,5 +117,15 @@
         flex-wrap: nowrap;
         flex-direction: column;
         justify-content: left;
+        gap: 8px;
     }
+
+    .FormWrapper {
+        width: 100%;
+
+        grid-row: 4/11;
+        grid-column: 1/6;
+        padding-inline: 0px;
+    }
+
 }

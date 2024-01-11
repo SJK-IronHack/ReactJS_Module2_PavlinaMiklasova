@@ -37,15 +37,15 @@ function ProductDetail() {
 
   return (
     <div className="ProductDetailWrapper">
-      <ImagesSliderDetail className="ImgSlider"/>
+      <ImagesSliderDetail className="ImgSlider" />
 
       {project && <h3>{project.title}</h3>}
       {project && <p>{project.description}</p>}
-  
+
 
       <div className="ButtonsWrapper">
-        <button onClick={handleDeleteProject}>Delete Project</button>
-        <br></br>
+        <button onClick={handleDeleteProject}>Delete Project
+        </button>
         {/* Links buttons add/update  */}
         <button type="button" onClick={handleAddClick}>
           {addComponent && navigate("/add")}
