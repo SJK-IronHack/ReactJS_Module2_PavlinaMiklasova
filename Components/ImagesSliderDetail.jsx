@@ -41,8 +41,8 @@ setProject(response.data);
     <div className="ImageCarousel">
       {project ? (project.images.map((image, index) =>{
         return (
-          <li key={index}>
-            <Image src={image.url}  alt="img not working"/>
+          <li key={index} className="ImageItem">
+            <img src={image.url}  alt="img not working"/>
           </li>
          
         )
