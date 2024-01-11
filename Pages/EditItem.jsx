@@ -39,8 +39,8 @@ const EditItem = () => {
     <>
       <div className="FormWrapper">
         <h3>Edit the Project</h3>
-        <form onSubmit={handleFormSubmit}>
-          <label>Project Title:</label>
+        <form onSubmit={handleFormSubmit} className="FormContent">
+          <label className="FormItem" >Project Title:</label>
           <input
             type="text"
             name="title"
@@ -48,7 +48,7 @@ const EditItem = () => {
             onChange={(e) => setTitle(e.target.value)}
           />
 
-          <label>Description:</label>
+          <label  className="FormItem" >Description:</label>
           <textarea
             name="description"
             value={description}

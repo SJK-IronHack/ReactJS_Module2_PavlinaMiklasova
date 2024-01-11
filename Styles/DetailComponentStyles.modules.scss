@@ -11,10 +11,34 @@
     }
 
 }
+
 .ButtonsWrapper {
     width: 100%;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
-justify-content: left;
+    justify-content: left;
+}
+
+
+// edit item
+
+.FormWrapper {
+    display: flex;
+    flex-direction: column;
+
+    .FormWrapper {
+        display: flex;
+        flex-direction: column;
+
+        .FormItem {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: baseline;
+
+
+        }
+    }
+
 }
