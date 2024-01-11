@@ -11,7 +11,6 @@
     width: 100vw;
     height: 100vh;
     display: grid;
-    gap: 8px;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
     grid-column-gap: 0px;
@@ -25,7 +24,7 @@
 .SideBarWrapper {
   grid-area: 2 / 1 / 7 / 2;
 }
-.ProductDetailWrapper {
+.ProductDetailWrapper, .FormWrapper {
   grid-area: 2 / 2 / 7 / 6;
 }
 

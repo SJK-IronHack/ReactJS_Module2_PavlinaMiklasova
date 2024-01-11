@@ -48,12 +48,13 @@ const EditItem = () => {
             onChange={(e) => setTitle(e.target.value)}
           />
 
-          <label  className="FormItem" >Description:</label>
+          <label  className="FormItem" >Description:
           <textarea
             name="description"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
-          />
+            />
+            </label>
 
           <button type="submit">Update the Project</button>
         </form>

@@ -28,11 +28,11 @@ const AddItem = () => {
   };
 
   return (
-    <>
-      <form className="addItemForm" onSubmit={handleFormSubmit}>
+    <div className="FormWrapper">
+      <form className="FormContent" onSubmit={handleFormSubmit} >
         <h2>Hi user! Add new product</h2>
-        <div className="Inputs">
-          <label>
+        
+          <label  className="FormItem">
             Project Title
             <input
               name="projectTitle"
@@ -42,7 +42,7 @@ const AddItem = () => {
               onChange={(e) => setTitle(e.target.value)}
             />
           </label>
-          <label>
+          <label  className="FormItem">
             Description Text
             <input
               name="description"
@@ -52,7 +52,7 @@ const AddItem = () => {
               onChange={(e) => setDescription(e.target.value)}
             />
           </label>
-          <label>
+          <label  className="FormItem">
             Year
             <input
               name="year"
@@ -62,7 +62,7 @@ const AddItem = () => {
               onChange={(e) => setYear(e.target.value)}
             />
           </label>
-          <label>
+          <label  className="FormItem">
             Thumbnail
             <input
               name="url"
@@ -72,7 +72,7 @@ const AddItem = () => {
               onChange={(e) => setThumbnail(e.target.value)}
             />
           </label>
-          <label>
+          <label  className="FormItem">
             Add Image
             <input
               name="url"
@@ -82,10 +82,10 @@ const AddItem = () => {
               onChange={(e) => setImages(e.target.value)}
             />
           </label>
-        </div>
+       
         <button type="submit">Add the Project</button>
       </form>
-    </>
+    </div>
   );
 };
 export default AddItem;
