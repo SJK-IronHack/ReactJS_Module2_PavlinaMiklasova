@@ -14,8 +14,12 @@
         height: auto;
         overflow-y: scroll;
 
+
         .ImgSlider {
             height: 400px;
+            width: 100%;
+
+
         }
     }
 
@@ -28,11 +32,14 @@
     }
 
     .ImageCarousel {
+        grid-area: 2 / 1 / 7 / 2;
+
         height: 60vh;
-        display: flex;
+        display: grid;
         flex-direction: row;
         gap: 0px;
         overflow-x: scroll;
+        max-width: 100%;
 
         li {
             list-style: none;
@@ -94,9 +101,10 @@
 
     .ImageCarousel {
         height: 40vh;
+        width: auto;
         display: flex;
         flex-direction: row;
-        gap: 0px;
+        row-gap: 8px;
         overflow-x: scroll;
 
         li {

@@ -4,11 +4,17 @@
     height: 60vh;
     display: flex;
     flex-direction: row;
-    gap: 0px;
+    gap: 8px;
     overflow-x: scroll;
+    width: fit-content;
+
 
     li {
         list-style: none;
+        column-gap:8px;
+        object-fit: fill;
+
+
     }
 
     img {
